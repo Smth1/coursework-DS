@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.roma.distr.grpc;
+
+message DecideRequestGrpc {
+  int32 value = 1;
+}
+
+message DecideResponseGrpc {
+}
+
+service DecideService {
+  rpc sendDecide(DecideRequestGrpc) returns (DecideResponseGrpc);
+}

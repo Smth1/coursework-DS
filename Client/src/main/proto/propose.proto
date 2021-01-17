@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.roma.distr.grpc;
+
+message ProposeRequestGrpc {
+  int32 value = 1;
+}
+
+message ProposeResponseGrpc {
+}
+
+service ProposeService {
+  rpc sendPropose(ProposeRequestGrpc) returns (ProposeResponseGrpc);
+}
